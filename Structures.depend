@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1721146915 source:/home/yu3ga/Projects/Programming/Programs/Structures/main.c
+	"stack/stack.h"
+
+1721146286 source:/home/yu3ga/Projects/Programming/Programs/Structures/stack.c
+	"stack.h"
+
+1721145430 /home/yu3ga/Projects/Programming/Programs/Structures/stack.h
+	<stdio.h>
+	<threads.h>
+	<stdlib.h>
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+
+1721145430 /home/yu3ga/Projects/Programming/Programs/Structures/stack/stack.h
+	<stdio.h>
+	<threads.h>
+	<stdlib.h>
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+
+1721146286 source:/home/yu3ga/Projects/Programming/Programs/Structures/stack/stack.c
+	"stack.h"
+
