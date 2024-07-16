@@ -2,6 +2,10 @@
 
 bool expand_allocated_memory(Stack *stack)
 {
+    if(stack == NULL) {
+        return false;
+    }
+
     size_t new_size = stack->allocated * 2;
     int64_t *new_memory = (int64_t *)malloc(sizeof(int64_t) * new_size);
     if(new_memory == NULL) {
@@ -43,7 +47,6 @@ Stack *create_stack()
 void free_stack(Stack *stack)
 {
     if(stack == NULL) {
-        stack->error = ARRAY_NOT_PROVIDED;
         return;
     }
 
@@ -53,6 +56,10 @@ void free_stack(Stack *stack)
 
 void print_stack(Stack *stack)
 {
+    if(stack == NULL) {
+        return;
+    }
+
     if(stack->stack_size == 0) {
         stack->error = STACK_IS_EMPTY;
         return;
@@ -66,6 +73,10 @@ void print_stack(Stack *stack)
 
 void stack_push(Stack *stack, int64_t value)
 {
+    if(stack == NULL) {
+        return;
+    }
+
     if(stack->stack_size == stack->allocated) {
         if(!expand_allocated_memory(stack)) {
             return;
@@ -81,6 +92,10 @@ void stack_push(Stack *stack, int64_t value)
 
 int64_t stack_pop(Stack *stack)
 {
+    if(stack == NULL) {
+        return STACK_NOT_PROVIDED;
+    }
+
     if(stack->stack_size == 0) {
         return stack->error = STACK_IS_EMPTY;
     }
@@ -90,6 +105,10 @@ int64_t stack_pop(Stack *stack)
 
 int64_t stack_peek(Stack *stack)
 {
+    if(stack == NULL) {
+        return STACK_NOT_PROVIDED;
+    }
+
     if(stack->stack_size == 0) {
         return stack->error = STACK_IS_EMPTY;
     }

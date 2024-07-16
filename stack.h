@@ -8,8 +8,8 @@
 #include <stdbool.h>
 
 #define BAD_ALLOC_ERROR 1
-#define ARRAY_NOT_PROVIDED (BAD_ALLOC_ERROR + 1)
-#define STACK_IS_EMPTY (ARRAY_NOT_PROVIDED + 1)
+#define STACK_NOT_PROVIDED (BAD_ALLOC_ERROR + 1)
+#define STACK_IS_EMPTY (STACK_NOT_PROVIDED + 1)
 
 typedef
 struct _stack
