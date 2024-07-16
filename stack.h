@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stddef.h>
+#include <stdbool.h>
 
 #define BAD_ALLOC_ERROR 1
 #define ARRAY_NOT_PROVIDED (BAD_ALLOC_ERROR + 1)

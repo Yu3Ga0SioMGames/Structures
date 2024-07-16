@@ -7,20 +7,30 @@ int main()
     Stack *stack;
     stack = create_stack();
 
+    /// [First] Check the Stack, if it is empty, then output = 3(Check screnshots)...
+    printf("%ld\n", stack_peek(stack));
+    printf("\n%ld\n\n", stack_pop(stack));
+
+    stack_push(stack, 1); // Add new element(1)...
+
+    /// [Second] Check it(New element) and delete it...
+    printf("%ld\n", stack_peek(stack));
+    printf("\n%ld\n", stack_pop(stack));
+
+    /// [Third] Check the Stack(Again, "It" must be empty(3))...
+    printf("\n%ld\n\n", stack_peek(stack));
+
+    /// [Fourth] Other, default operation...
     for(int64_t i = 0; i < initial_size; ++i) {
         stack_push(stack, i);
     }
+    stack_push(stack, 87);
+    print_stack(stack);
+    printf("\n%ld\n\n", stack_pop(stack));
+    print_stack(stack);
+    printf("\n%ld\n\n", stack_peek(stack));
 
-    stack_push(stack, 87); // Добавляет элемент с заданным значением(Вызывался ещё выше в "11" строчке);
-
-    print_stack(stack); // Выводит сам стёк на экран;
-
-    printf("\n%ld\n\n", stack_pop(stack)); // Вывод на экран верхушку стёка(Удалённый элемент);
-
-    print_stack(stack); // Выводит сам стёк на экран(Вызывался ещё выше в "16" строчке);
-
-    printf("\n%ld\n\n", stack_peek(stack)); // Выводит на экран верхушку стёка;
-
+    /// End of programm...
     free_stack(stack);
     return 0;
 }
