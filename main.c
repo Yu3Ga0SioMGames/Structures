@@ -3,11 +3,15 @@
 int main()
 {
     Stack *stack;
+    stack = NULL;
+
+    printf("%ld\n", stack_pop(stack));
+    printf("\n%ld\n\n", stack_peek(stack));
+
     stack = create_stack();
     int64_t initial_size = 10;
 
-    printf("%ld\n", stack_peek(stack));
-    printf("\n%ld\n\n", stack_pop(stack));
+
     stack_push(stack, 1);
     printf("%ld\n", stack_peek(stack));
     printf("\n%ld\n", stack_pop(stack));

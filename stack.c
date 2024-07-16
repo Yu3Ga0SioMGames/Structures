@@ -1,5 +1,7 @@
 #include "stack.h"
 
+thread_local int container_error = 0;
+
 bool expand_allocated_memory(Stack *stack)
 {
     if(stack == NULL) {
@@ -9,7 +11,7 @@ bool expand_allocated_memory(Stack *stack)
     size_t new_size = stack->allocated * 2;
     int64_t *new_memory = (int64_t *)malloc(sizeof(int64_t) * new_size);
     if(new_memory == NULL) {
-        stack->error = BAD_ALLOC_ERROR;
+        container_error = BAD_ALLOC_ERROR;
         return false;
     }
 
@@ -39,7 +41,6 @@ Stack *create_stack()
     }
     new_stack->allocated = 1;
     new_stack->stack_size = 0;
-    new_stack->error = 0;
 
     return new_stack;
 }
@@ -61,7 +62,7 @@ void print_stack(Stack *stack)
     }
 
     if(stack->stack_size == 0) {
-        stack->error = STACK_IS_EMPTY;
+        container_error = STACK_IS_EMPTY;
         return;
     }
 
@@ -81,8 +82,6 @@ void stack_push(Stack *stack, int64_t value)
         if(!expand_allocated_memory(stack)) {
             return;
         }
-
-        expand_allocated_memory(stack);
     }
 
     stack->stack_data[stack->stack_size] = value;
@@ -97,7 +96,7 @@ int64_t stack_pop(Stack *stack)
     }
 
     if(stack->stack_size == 0) {
-        return stack->error = STACK_IS_EMPTY;
+        return container_error = STACK_IS_EMPTY;
     }
 
     return stack->stack_data[--stack->stack_size];
@@ -110,7 +109,7 @@ int64_t stack_peek(Stack *stack)
     }
 
     if(stack->stack_size == 0) {
-        return stack->error = STACK_IS_EMPTY;
+        return container_error = STACK_IS_EMPTY;
     }
 
     return stack->stack_data[stack->stack_size - 1];
