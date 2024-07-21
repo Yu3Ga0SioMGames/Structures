@@ -1,4 +1,4 @@
-#include "stack_test.h"
+#include "test.h"
 
 int stack_test()
 {
