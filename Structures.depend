@@ -1,6 +1,6 @@
 # depslib dependency file v1.0
-1721419626 source:/home/yu3ga/Projects/Programming/Programs/Structures/main.c
-	"stack/stack_test/stack_test.h"
+1721594200 source:/home/yu3ga/Projects/Programming/Programs/Structures/main.c
+	"tree/test/test.h"
 
 1721146286 source:/home/yu3ga/Projects/Programming/Programs/Structures/stack.c
 	"stack.h"
@@ -24,15 +24,15 @@
 1721146286 source:/home/yu3ga/Projects/Programming/Programs/Structures/stack/stack.c
 	"stack.h"
 
-1721419643 /home/yu3ga/Projects/Programming/Programs/Structures/stack/stack/stack.h
+1721594131 /home/yu3ga/Projects/Programming/Programs/Structures/stack/stack/stack.h
 	<stdio.h>
-	<threads.h>
 	<stdlib.h>
 	<stdint.h>
 	<stddef.h>
 	<stdbool.h>
+	"common.h"
 
-1721419643 source:/home/yu3ga/Projects/Programming/Programs/Structures/stack/stack/stack.c
+1721594131 source:/home/yu3ga/Projects/Programming/Programs/Structures/stack/stack/stack.c
 	"stack.h"
 
 1721419643 /home/yu3ga/Projects/Programming/Programs/Structures/stack/stack_test/stack_test.h
@@ -40,4 +40,43 @@
 
 1721419643 source:/home/yu3ga/Projects/Programming/Programs/Structures/stack/stack_test/stack_test.c
 	"stack_test.h"
+
+1721586015 source:/home/yu3ga/Projects/Programming/Programs/Structures/trees/trees_test/trees_test.c
+	"trees_test.h"
+
+1721585861 /home/yu3ga/Projects/Programming/Programs/Structures/trees/trees_test/trees_test.h
+	"../trees/trees.h"
+
+1721585949 /home/yu3ga/Projects/Programming/Programs/Structures/trees/trees/trees.h
+	<stdio.h>
+	<threads.h>
+	<stdlib.h>
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+
+1721585960 source:/home/yu3ga/Projects/Programming/Programs/Structures/trees/trees/trees.c
+	"trees.h"
+
+1721588585 /home/yu3ga/Projects/Programming/Programs/Structures/tree/test/test.h
+	"../tree.h"
+
+1721594131 /home/yu3ga/Projects/Programming/Programs/Structures/tree/tree.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<stddef.h>
+	"common.h"
+
+1721594131 source:/home/yu3ga/Projects/Programming/Programs/Structures/tree/tree.c
+	"tree.h"
+
+1721589866 source:/home/yu3ga/Projects/Programming/Programs/Structures/tree/test/test.c
+	"test.h"
+
+1721594131 /home/yu3ga/Projects/Programming/Programs/Structures/common/common.h
+	<threads.h>
+
+1721591189 source:/home/yu3ga/Projects/Programming/Programs/Structures/common/common.c
+	"common.h"
 

@@ -30,7 +30,12 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="common" />
 		</Compiler>
+		<Unit filename="common/common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common/common.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -42,14 +47,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="stack/stack_test/stack_test.h" />
-		<Unit filename="trees/trees/trees.c">
+		<Unit filename="tree/test/test.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="trees/trees/trees.h" />
-		<Unit filename="trees/trees_test/trees_test.c">
+		<Unit filename="tree/test/test.h" />
+		<Unit filename="tree/tree.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="trees/trees_test/trees_test.h" />
+		<Unit filename="tree/tree.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
