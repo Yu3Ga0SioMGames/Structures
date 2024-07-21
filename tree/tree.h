@@ -1,5 +1,5 @@
-#ifndef TREES_H_INCLUDED
-#define TREES_H_INCLUDED
+#ifndef TREE_H_INCLUDED
+#define TREE_H_INCLUDED
 
 #include <stdio.h>
 #include <stdlib.h>
