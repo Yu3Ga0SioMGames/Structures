@@ -2,11 +2,11 @@
 #define STACK_H_INCLUDED
 
 #include <stdio.h>
-#include <threads.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include <threads.h>
 
 #include "common.h"
 
