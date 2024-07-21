@@ -5,7 +5,7 @@ thread_local int container_error = 0;
 bool expand_allocated_memory(Stack *stack)
 {
     if(stack == NULL) {
-        container_error = STACK_NOT_PROVIDED;
+        container_error = CONTAINER_NOT_PROVIDED;
         return false;
     }
 
@@ -51,7 +51,7 @@ Stack *create_stack()
 void free_stack(Stack *stack)
 {
     if(stack == NULL) {
-        container_error = STACK_NOT_PROVIDED;
+        container_error = CONTAINER_NOT_PROVIDED;
         return;
     }
 
@@ -62,12 +62,12 @@ void free_stack(Stack *stack)
 void print_stack(Stack *stack)
 {
     if(stack == NULL) {
-        container_error = STACK_NOT_PROVIDED;
+        container_error = CONTAINER_NOT_PROVIDED;
         return;
     }
 
     if(stack->stack_size == 0) {
-        container_error = STACK_IS_EMPTY;
+        container_error = CONTAINER_IS_EMPTY;
         return;
     }
 
@@ -80,7 +80,7 @@ void print_stack(Stack *stack)
 void stack_push(Stack *stack, int64_t value)
 {
     if(stack == NULL) {
-        container_error = STACK_NOT_PROVIDED;
+        container_error = CONTAINER_NOT_PROVIDED;
         return;
     }
 
@@ -99,11 +99,11 @@ void stack_push(Stack *stack, int64_t value)
 int64_t stack_pop(Stack *stack)
 {
     if(stack == NULL) {
-        return container_error = STACK_NOT_PROVIDED;
+        return container_error = CONTAINER_NOT_PROVIDED;
     }
 
     if(stack->stack_size == 0) {
-        return container_error = STACK_IS_EMPTY;
+        return container_error = CONTAINER_IS_EMPTY;
     }
 
     return stack->stack_data[--stack->stack_size];
@@ -112,11 +112,11 @@ int64_t stack_pop(Stack *stack)
 int64_t stack_peek(Stack *stack)
 {
     if(stack == NULL) {
-        return container_error = STACK_NOT_PROVIDED;
+        return container_error = CONTAINER_NOT_PROVIDED;
     }
 
     if(stack->stack_size == 0) {
-        return container_error = STACK_IS_EMPTY;
+        return container_error = CONTAINER_IS_EMPTY;
     }
 
     return stack->stack_data[stack->stack_size - 1];
