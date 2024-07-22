@@ -16,7 +16,7 @@ struct _tree_node
     struct _tree_node *right;
 } TreeNode;
 
-TreeNode *create_tree(int64_t);
+TreeNode *create_tree_node(int64_t);
 
 void free_tree_node(TreeNode *);
 

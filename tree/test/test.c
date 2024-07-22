@@ -3,6 +3,7 @@
 int test()
 {
     TreeNode *tree_node = NULL;
+
     tree_node = create_tree_node(0);
     tree_node->left = create_tree_node(1);
     tree_node->right = create_tree_node(2);
