@@ -1,5 +1,12 @@
 #include "tree.h"
 
+void print_tree_node_(TreeNode *tree_node)
+{
+    printf("%ld ", tree_node->data);
+    print_tree_node(tree_node->left);
+    print_tree_node(tree_node->right);
+}
+
 TreeNode *create_tree_node(int64_t input_data)
 {
     TreeNode *tree_node = (TreeNode *)malloc(sizeof(TreeNode));
@@ -20,18 +27,16 @@ void free_tree_node(TreeNode *tree_node)
         free_tree_node(tree_node->right);
         free_tree_node(tree_node->left);
         free(tree_node);
+    } else {
+        container_error = CONTAINER_NOT_PROVIDED;
     }
-
-    container_error = CONTAINER_NOT_PROVIDED;
 }
 
 void print_tree_node(TreeNode *tree_node)
 {
     if(tree_node != NULL) {
-        printf("%ld ", tree_node->data);
-        print_tree_node(tree_node->left);
-        print_tree_node(tree_node->right);
+        print_tree_node_(tree_node);
+    } else {
+        container_error = CONTAINER_NOT_PROVIDED;
     }
-
-    container_error = CONTAINER_NOT_PROVIDED;
 }
