@@ -40,3 +40,18 @@ void print_tree_node(TreeNode *tree_node)
         container_error = CONTAINER_NOT_PROVIDED;
     }
 }
+
+TreeNode *insert_tree_node(TreeNode *tree_node, int64_t input_data)
+{
+    if(tree_node == NULL) {
+        return create_tree_node(input_data);
+    }
+
+    if(input_data < tree_node->data) {
+        tree_node->left = insert_tree_node(tree_node->left, input_data);
+    } else if(input_data >= tree_node->data) {
+        tree_node->right = insert_tree_node(tree_node->right, input_data);
+    }
+
+    return tree_node;
+}
