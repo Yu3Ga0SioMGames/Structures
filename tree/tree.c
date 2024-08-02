@@ -47,11 +47,25 @@ TreeNode *insert_tree_node(TreeNode *tree_node, int64_t input_data)
         return create_tree_node(input_data);
     }
 
-    if(input_data < tree_node->data) {
-        tree_node->left = insert_tree_node(tree_node->left, input_data);
-    } else if(input_data >= tree_node->data) {
-        tree_node->right = insert_tree_node(tree_node->right, input_data);
+    TreeNode *parent_tree_node = NULL;
+
+    while(tree_node != NULL) {
+        parent_tree_node = tree_node;
+
+        if(input_data < tree_node->data) {
+            tree_node = tree_node->left;
+        } else {
+            tree_node = tree_node->right;
+        }
+    }
+
+    if(input_data < parent_tree_node->data) {
+        parent_tree_node->left = create_tree_node(input_data);
+    } else {
+        parent_tree_node->right = create_tree_node(input_data);
     }
 
     return tree_node;
 }
+
+;
