@@ -22,6 +22,6 @@ void free_tree_node(TreeNode *);
 
 void print_tree_node(TreeNode *);
 
-TreeNode *insert_tree_node(TreeNode *, int64_t);
+void insert_tree_node(TreeNode **, int64_t);
 
 #endif

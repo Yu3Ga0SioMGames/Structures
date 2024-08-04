@@ -2,8 +2,8 @@
 
 void print_tree_node_(TreeNode *tree_node)
 {
-    printf("%ld ", tree_node->data);
     print_tree_node(tree_node->left);
+    printf("%ld ", tree_node->data);
     print_tree_node(tree_node->right);
 }
 
@@ -41,31 +41,24 @@ void print_tree_node(TreeNode *tree_node)
     }
 }
 
-TreeNode *insert_tree_node(TreeNode *tree_node, int64_t input_data)
+void insert_tree_node(TreeNode **tree_node, int64_t input_data)
 {
-    if(tree_node == NULL) {
-        return create_tree_node(input_data);
+    TreeNode **current_ptr = tree_node;
+
+    if(current_ptr == NULL) {
+        container_error = CONTAINER_NOT_PROVIDED;
+        return;
     }
 
-    TreeNode *parent_tree_node = NULL;
+    TreeNode *new_tree_node = create_tree_node(input_data);
 
-    while(tree_node != NULL) {
-        parent_tree_node = tree_node;
-
-        if(input_data < tree_node->data) {
-            tree_node = tree_node->left;
+    while(*current_ptr != NULL) {
+        if(input_data < (*current_ptr)->data) {
+            current_ptr = &((*current_ptr)->left);
         } else {
-            tree_node = tree_node->right;
+            current_ptr = &((*current_ptr)->right);
         }
     }
 
-    if(input_data < parent_tree_node->data) {
-        parent_tree_node->left = create_tree_node(input_data);
-    } else {
-        parent_tree_node->right = create_tree_node(input_data);
-    }
-
-    return tree_node;
+    *current_ptr = new_tree_node;
 }
-
-;
