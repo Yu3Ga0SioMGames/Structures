@@ -24,4 +24,6 @@ void print_tree_node(TreeNode *);
 
 void insert_tree_node(TreeNode **, int64_t);
 
+TreeNode *find_tree_node(TreeNode *, int64_t);
+
 #endif

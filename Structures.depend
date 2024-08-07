@@ -61,17 +61,17 @@
 1721648417 /home/yu3ga/Projects/Programming/Programs/Structures/tree/test/test.h
 	"../tree.h"
 
-1722799414 /home/yu3ga/Projects/Programming/Programs/Structures/tree/tree.h
+1723061806 /home/yu3ga/Projects/Programming/Programs/Structures/tree/tree.h
 	<stdio.h>
 	<stdlib.h>
 	<stdint.h>
 	<stddef.h>
 	"common.h"
 
-1722800102 source:/home/yu3ga/Projects/Programming/Programs/Structures/tree/tree.c
+1723063945 source:/home/yu3ga/Projects/Programming/Programs/Structures/tree/tree.c
 	"tree.h"
 
-1722800059 source:/home/yu3ga/Projects/Programming/Programs/Structures/tree/test/test.c
+1723068138 source:/home/yu3ga/Projects/Programming/Programs/Structures/tree/test/test.c
 	"test.h"
 
 1721594617 /home/yu3ga/Projects/Programming/Programs/Structures/common/common.h

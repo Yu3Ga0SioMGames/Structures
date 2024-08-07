@@ -62,3 +62,16 @@ void insert_tree_node(TreeNode **tree_node, int64_t input_data)
 
     *current_ptr = new_tree_node;
 }
+
+TreeNode *find_tree_node(TreeNode *tree_node, int64_t input_data)
+{
+    if(tree_node == NULL || tree_node->data == input_data) {
+        return tree_node;
+    }
+
+    if(input_data < tree_node->data) {
+        return find_tree_node(tree_node->left, input_data);
+    } else {
+        return find_tree_node(tree_node->right, input_data);
+    }
+}
