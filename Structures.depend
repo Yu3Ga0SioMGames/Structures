@@ -80,3 +80,45 @@
 1721648571 source:/home/yu3ga/Projects/Programming/Programs/Structures/common/common.c
 	"common.h"
 
+1725185510 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/common/common.c
+	"common.h"
+
+1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/common/common.h
+	<threads.h>
+
+1725185510 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/main.c
+	"tree/test/test.h"
+
+1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.h
+	"../tree.h"
+
+1726869702 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<stddef.h>
+	"common.h"
+
+1725185510 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack/stack.c
+	"stack.h"
+
+1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack/stack.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+	"common.h"
+
+1725185510 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack_test/stack_test.c
+	"stack_test.h"
+
+1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack_test/stack_test.h
+	"../stack/stack.h"
+
+1726876644 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.c
+	"test.h"
+
+1726876541 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.c
+	"tree.h"
+

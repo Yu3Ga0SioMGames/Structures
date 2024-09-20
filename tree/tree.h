@@ -11,9 +11,9 @@
 typedef
 struct _tree_node
 {
-    int64_t data;
-    struct _tree_node *left;
-    struct _tree_node *right;
+	int64_t data;
+	struct _tree_node *left;
+	struct _tree_node *right;
 } TreeNode;
 
 TreeNode *create_tree_node(int64_t);
@@ -25,5 +25,7 @@ void print_tree_node(TreeNode *);
 void insert_tree_node(TreeNode **, int64_t);
 
 TreeNode *find_tree_node(TreeNode *, int64_t);
+
+void remove_tree_node(TreeNode **, int64_t);
 
 #endif
