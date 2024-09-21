@@ -32,6 +32,15 @@ void free_tree_node(TreeNode *tree_node)
 	}
 }
 
+void free_this_tree_node(TreeNode *tree_node)
+{
+	if(tree_node != NULL) {
+		free(tree_node);
+	} else {
+		container_error = CONTAINER_NOT_PROVIDED;
+	}
+}
+
 void print_tree_node(TreeNode *tree_node)
 {
 	if(tree_node != NULL) {
@@ -41,26 +50,44 @@ void print_tree_node(TreeNode *tree_node)
 	}
 }
 
-void insert_tree_node(TreeNode **tree_node, int64_t input_data)
+void insert_tree_node(TreeNode **root, TreeNode *node)
 {
-	TreeNode **current_ptr = tree_node;
+	TreeNode **current_ptr = root;
 
 	if(current_ptr == NULL) {
 		container_error = CONTAINER_NOT_PROVIDED;
+
 		return;
 	}
 
-	TreeNode *new_tree_node = create_tree_node(input_data);
+	if(node == NULL) {
+		return;
+	}
 
 	while(*current_ptr != NULL) {
-		if(input_data < (*current_ptr)->data) {
+		if(node->data < (*current_ptr)->data) {
 			current_ptr = &((*current_ptr)->left);
 		} else {
 			current_ptr = &((*current_ptr)->right);
 		}
 	}
 
-	*current_ptr = new_tree_node;
+	*current_ptr = node;
+}
+
+void insert_tree_value(TreeNode **tree_node, int64_t input_data)
+{
+	TreeNode **current_ptr = tree_node;
+
+	if(current_ptr == NULL) {
+		container_error = CONTAINER_NOT_PROVIDED;
+
+		return;
+	}
+
+	TreeNode *new_tree_node = create_tree_node(input_data);
+
+	insert_tree_node(tree_node, new_tree_node);
 }
 
 TreeNode *find_tree_node(TreeNode *tree_node, int64_t input_data)
@@ -84,66 +111,38 @@ void remove_tree_node(TreeNode **tree_node, int64_t input_data)
 		return;
 	}
 
-	TreeNode *current_tree_node = *tree_node;
-	TreeNode *parent_tree_node = NULL;
+	TreeNode *current = *tree_node;
+	TreeNode *parent = NULL;
 
-	while(current_tree_node != NULL && current_tree_node->data != input_data) {
-		parent_tree_node = current_tree_node;
-		if(input_data < current_tree_node->data) {
-			current_tree_node = current_tree_node->left;
+	while(current != NULL && current->data != input_data) {
+		parent = current;
+		if(input_data < current->data) {
+			current = current->left;
 		} else {
-			current_tree_node = current_tree_node->right;
+			current = current->right;
 		}
 	}
 
-	if(current_tree_node == NULL) {
-		container_error = CONTAINER_IS_EMPTY;
-
+	if(current == NULL) {
 		return;
 	}
 
-	if(current_tree_node->left == NULL && current_tree_node->right == NULL) {
-		if(parent_tree_node == NULL) {
-			free_tree_node(*tree_node);
-			*tree_node = NULL;
+	TreeNode **insert_place = NULL;
+
+	if(parent != NULL) {
+		if(input_data < parent->data) {
+			parent->left = NULL;
 		} else {
-			if(parent_tree_node->left == current_tree_node) {
-				parent_tree_node->left = NULL;
-			} else {
-				parent_tree_node->right = NULL;
-			}
-			free_tree_node(current_tree_node);
+			parent->right = NULL;
 		}
-	} else if(current_tree_node->left != NULL && current_tree_node->right != NULL) {
-		TreeNode *successor = current_tree_node->right;
-		while(successor->left != NULL) {
-			successor = successor->left;
-		}
-		int64_t tmp = current_tree_node->data;
-		current_tree_node->data = successor->data;
-		remove_tree_node(&(current_tree_node->right), successor->data);
+		insert_place = &parent;
 	} else {
-		TreeNode *child_tree_node = NULL;
-		if(current_tree_node->left != NULL) {
-			child_tree_node = current_tree_node->left;
-		} else {
-			child_tree_node = current_tree_node->right;
-		}
-
-		if(parent_tree_node == NULL) {
-			*tree_node = child_tree_node;
-		} else {
-			if(parent_tree_node->left == current_tree_node) {
-				parent_tree_node->left = child_tree_node;
-			} else {
-				parent_tree_node->right = child_tree_node;
-			}
-		}
-
-		if(current_tree_node->right == child_tree_node) {
-			child_tree_node->left = current_tree_node->left;
-		}
-
-		free_tree_node(current_tree_node);
+		*tree_node = NULL;
+		insert_place = tree_node;
 	}
+
+	insert_tree_node(insert_place, current->left);
+	insert_tree_node(insert_place, current->right);
+
+	free_this_tree_node(current);
 }

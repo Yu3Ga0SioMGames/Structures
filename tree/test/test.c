@@ -18,42 +18,42 @@ int test()
 
 
 	printf("\n");
-	insert_tree_node(&tree_node, 11);
+	insert_tree_value(&tree_node, 11);
 	print_tree_node(tree_node);
 	printf("\n");
 
 	printf("\n");
-	insert_tree_node(&tree_node, 12);
+	insert_tree_value(&tree_node, 12);
 	print_tree_node(tree_node);
 	printf("\n");
 
 	printf("\n");
-	insert_tree_node(&tree_node, 13);
+	insert_tree_value(&tree_node, 13);
 	print_tree_node(tree_node);
 	printf("\n");
 
 	printf("\n");
-	insert_tree_node(&tree_node, 14);
+	insert_tree_value(&tree_node, 14);
 	print_tree_node(tree_node);
 	printf("\n");
 
 	printf("\n");
-	insert_tree_node(&tree_node, 15);
+	insert_tree_value(&tree_node, 15);
 	print_tree_node(tree_node);
 	printf("\n");
 
 	printf("\n");
-	insert_tree_node(&tree_node, 16);
+	insert_tree_value(&tree_node, 16);
 	print_tree_node(tree_node);
 	printf("\n");
 
 	printf("\n");
-	insert_tree_node(&tree_node, 17);
+	insert_tree_value(&tree_node, 17);
 	print_tree_node(tree_node);
 	printf("\n");
 
 	printf("\n");
-	insert_tree_node(&tree_node, 18);
+	insert_tree_value(&tree_node, 18);
 	print_tree_node(tree_node);
 	printf("\n");
 
@@ -158,10 +158,10 @@ int test()
 	print_tree_node(tree_node);
 	printf("\n");
 
-	/*printf("\n");///
-	remove_tree_node(&tree_node, 12);///
-	print_tree_node(tree_node);///
-	printf("\n");///*/
+	printf("\n");
+	remove_tree_node(&tree_node, 12);
+	print_tree_node(tree_node);
+	printf("\n");
 
 	printf("\n");
 	remove_tree_node(&tree_node, 11);
@@ -174,18 +174,18 @@ int test()
 	printf("\n");
 
 	printf("\n");
-	/*remove_tree_node(&tree_node, 13);
+	remove_tree_node(&tree_node, 13);
 	print_tree_node(tree_node);
 	printf("\n");
 
 	printf("\n");
-	/*remove_tree_node(&tree_node, 14);
+	remove_tree_node(&tree_node, 14);
 	print_tree_node(tree_node);
 	printf("\n");
 
-	/*printf("\n");
+	printf("\n");
 	remove_tree_node(&tree_node, 15);
-	print_tree_node(tree_node);*/
+	print_tree_node(tree_node);
 
 
 	printf("\n\n");

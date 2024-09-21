@@ -92,7 +92,7 @@
 1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.h
 	"../tree.h"
 
-1726869702 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.h
+1726923911 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.h
 	<stdio.h>
 	<stdlib.h>
 	<stdint.h>
@@ -116,9 +116,9 @@
 1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack_test/stack_test.h
 	"../stack/stack.h"
 
-1726876644 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.c
+1726923911 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.c
 	"test.h"
 
-1726876541 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.c
+1726925970 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.c
 	"tree.h"
 

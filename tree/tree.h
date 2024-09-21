@@ -20,9 +20,13 @@ TreeNode *create_tree_node(int64_t);
 
 void free_tree_node(TreeNode *);
 
+void free_this_tree_node(TreeNode *);
+
 void print_tree_node(TreeNode *);
 
-void insert_tree_node(TreeNode **, int64_t);
+void insert_tree_node(TreeNode **, TreeNode *);
+
+void insert_tree_value(TreeNode **, int64_t);
 
 TreeNode *find_tree_node(TreeNode *, int64_t);
 
