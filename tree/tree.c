@@ -146,3 +146,41 @@ void remove_tree_node(TreeNode **tree_node, int64_t input_data)
 
 	free_this_tree_node(current);
 }
+
+TreeNode *rotate_left_tree_node(TreeNode *root)
+{
+	if(root == NULL) {
+		container_error = CONTAINER_NOT_PROVIDED;
+
+		return root;
+	}
+
+	TreeNode *new_root = root->right;
+	if(new_root == NULL) {
+		return root;
+	}
+	root->right = new_root->left;
+	new_root->left = root;
+
+	return new_root;
+}
+
+TreeNode *rotate_right_tree_node(TreeNode *root)
+{
+	if(root == NULL) {
+		container_error = CONTAINER_NOT_PROVIDED;
+
+		return root;
+	}
+
+	TreeNode *new_root = root->left;
+	if(new_root == NULL) {
+		return root;
+	}
+	root->left = new_root->right;
+	new_root->right = root;
+
+	return new_root;
+}
+
+//

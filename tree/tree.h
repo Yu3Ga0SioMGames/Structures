@@ -32,4 +32,10 @@ TreeNode *find_tree_node(TreeNode *, int64_t);
 
 void remove_tree_node(TreeNode **, int64_t);
 
+TreeNode *rotate_left_tree_node(TreeNode *);
+
+TreeNode *rotate_right_tree_node(TreeNode *);
+
+//
+
 #endif

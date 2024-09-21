@@ -186,6 +186,18 @@ int test()
 	printf("\n");
 	remove_tree_node(&tree_node, 15);
 	print_tree_node(tree_node);
+	printf("\n");
+
+
+	printf("\n");
+	TreeNode *r = NULL;
+	r = rotate_left_tree_node(tree_node);
+	print_tree_node(tree_node);
+	printf("\n");
+
+	printf("\n");
+	r = rotate_right_tree_node(tree_node);
+	print_tree_node(tree_node);
 
 
 	printf("\n\n");
