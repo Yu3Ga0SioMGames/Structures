@@ -36,6 +36,6 @@ TreeNode *rotate_left_tree_node(TreeNode *);
 
 TreeNode *rotate_right_tree_node(TreeNode *);
 
-//
+void balancing_tree_node(TreeNode **);
 
 #endif
