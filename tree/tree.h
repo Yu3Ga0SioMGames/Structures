@@ -12,6 +12,7 @@ typedef
 struct _tree_node
 {
 	int64_t data;
+	int8_t balance_factor;
 	struct _tree_node *left;
 	struct _tree_node *right;
 } TreeNode;
@@ -36,6 +37,6 @@ TreeNode *rotate_left_tree_node(TreeNode *);
 
 TreeNode *rotate_right_tree_node(TreeNode *);
 
-void balancing_tree_node(TreeNode **);
+//void balance_tree_node(TreeNode **);
 
 #endif
