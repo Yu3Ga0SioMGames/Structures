@@ -57,19 +57,16 @@ void insert_tree_node(TreeNode **root, TreeNode *new_node)
 
 	if(current_ptr == NULL) {
 		container_error = CONTAINER_NOT_PROVIDED;
-
 		return;
 	}
 
 	if((*current_ptr) == NULL) {
 		(*current_ptr) = new_node;
-
 		return;
 	}
 
 	if(new_node == NULL) {
 		container_error = CONTAINER_IS_EMPTY;
-
 		return;
 	}
 
