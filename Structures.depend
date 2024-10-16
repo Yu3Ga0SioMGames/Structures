@@ -86,13 +86,14 @@
 1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/common/common.h
 	<threads.h>
 
-1725185510 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/main.c
+1728846154 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/main.c
 	"tree/test/test.h"
 
 1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.h
 	"../tree.h"
 
-1727120171 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.h
+1729103865 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.h
+	<math.h>
 	<stdio.h>
 	<stdlib.h>
 	<stdint.h>
@@ -116,9 +117,9 @@
 1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack_test/stack_test.h
 	"../stack/stack.h"
 
-1727118697 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.c
+1729105895 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.c
 	"test.h"
 
-1727210666 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.c
+1729112069 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.c
 	"tree.h"
 

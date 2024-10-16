@@ -2,5 +2,5 @@
 
 int main()
 {
-    return test();
+	return remove_test();
 }
