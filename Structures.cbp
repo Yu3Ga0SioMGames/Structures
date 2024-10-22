@@ -39,14 +39,14 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="stack/stack/stack.c">
+		<Unit filename="stack/stack.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="stack/stack/stack.h" />
-		<Unit filename="stack/stack_test/stack_test.c">
+		<Unit filename="stack/stack.h" />
+		<Unit filename="stack/test/test.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="stack/stack_test/stack_test.h" />
+		<Unit filename="stack/test/test.h" />
 		<Unit filename="tree/test/test.c">
 			<Option compilerVar="CC" />
 		</Unit>

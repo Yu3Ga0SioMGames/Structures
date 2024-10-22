@@ -123,3 +123,20 @@
 1729112069 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.c
 	"tree.h"
 
+1725185510 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack.c
+	"stack.h"
+
+1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+	"common.h"
+
+1729631490 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/test/test.c
+	"test.h"
+
+1729631490 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/test/test.h
+	"../stack.h"
+
