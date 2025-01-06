@@ -2,66 +2,186 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="trees/trees/trees.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+	<File name="main.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="262" topLine="0" />
+			<Cursor1 position="65" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="20" />
+			<Collapse line="3" />
 		</Folding>
 	</File>
-	<File name="stack/stack.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
+	<File name="stack/stack.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="192" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="trees/trees/trees.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="363" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="stack/stack.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2507" topLine="42" />
+			<Cursor1 position="2229" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="5" />
-			<Collapse line="6" />
-			<Collapse line="13" />
-			<Collapse line="18" />
+			<Collapse line="3" />
+			<Collapse line="4" />
+			<Collapse line="11" />
+			<Collapse line="16" />
+			<Collapse line="29" />
 			<Collapse line="31" />
-			<Collapse line="33" />
-			<Collapse line="39" />
-			<Collapse line="73" />
+			<Collapse line="37" />
+			<Collapse line="49" />
+			<Collapse line="50" />
+			<Collapse line="60" />
+			<Collapse line="61" />
+			<Collapse line="66" />
+			<Collapse line="71" />
+			<Collapse line="78" />
+			<Collapse line="79" />
+			<Collapse line="84" />
+			<Collapse line="85" />
+			<Collapse line="97" />
+			<Collapse line="98" />
+			<Collapse line="102" />
+			<Collapse line="110" />
+			<Collapse line="111" />
+			<Collapse line="115" />
 		</Folding>
 	</File>
-	<File name="common/common.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+	<File name="tree/tree.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="59" topLine="0" />
+			<Cursor1 position="9002" topLine="44" />
+		</Cursor>
+		<Folding>
+			<Collapse line="12" />
+			<Collapse line="13" />
+			<Collapse line="24" />
+			<Collapse line="25" />
+			<Collapse line="35" />
+			<Collapse line="36" />
+			<Collapse line="38" />
+			<Collapse line="45" />
+			<Collapse line="47" />
+			<Collapse line="60" />
+			<Collapse line="61" />
+			<Collapse line="71" />
+			<Collapse line="72" />
+			<Collapse line="80" />
+			<Collapse line="81" />
+			<Collapse line="91" />
+			<Collapse line="92" />
+			<Collapse line="99" />
+			<Collapse line="101" />
+			<Collapse line="103" />
+			<Collapse line="109" />
+			<Collapse line="111" />
+			<Collapse line="121" />
+			<Collapse line="123" />
+			<Collapse line="135" />
+			<Collapse line="136" />
+			<Collapse line="140" />
+			<Collapse line="148" />
+			<Collapse line="149" />
+			<Collapse line="153" />
+			<Collapse line="154" />
+			<Collapse line="163" />
+			<Collapse line="174" />
+			<Collapse line="176" />
+			<Collapse line="178" />
+			<Collapse line="184" />
+			<Collapse line="186" />
+			<Collapse line="197" />
+			<Collapse line="198" />
+			<Collapse line="204" />
+			<Collapse line="207" />
+			<Collapse line="219" />
+			<Collapse line="221" />
+			<Collapse line="227" />
+			<Collapse line="229" />
+			<Collapse line="237" />
+			<Collapse line="238" />
+			<Collapse line="246" />
+			<Collapse line="248" />
+			<Collapse line="255" />
+			<Collapse line="261" />
+			<Collapse line="270" />
+			<Collapse line="279" />
+			<Collapse line="280" />
+			<Collapse line="287" />
+			<Collapse line="288" />
+			<Collapse line="299" />
+			<Collapse line="300" />
+			<Collapse line="307" />
+			<Collapse line="308" />
+			<Collapse line="319" />
+			<Collapse line="320" />
+			<Collapse line="326" />
+			<Collapse line="328" />
+			<Collapse line="335" />
+			<Collapse line="348" />
+			<Collapse line="349" />
+			<Collapse line="355" />
+			<Collapse line="356" />
+			<Collapse line="364" />
+			<Collapse line="376" />
+			<Collapse line="388" />
+			<Collapse line="389" />
+			<Collapse line="393" />
+			<Collapse line="394" />
+			<Collapse line="400" />
+		</Folding>
+	</File>
+	<File name="tree/test/test.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="11" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="82" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="stack/test/test.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+	<File name="common/common.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="10" topLine="0" />
+			<Cursor1 position="251" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="stack/test/test.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="20" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="657" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="3" />
 			<Collapse line="18" />
 		</Folding>
 	</File>
-	<File name="main.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+	<File name="tree/test/test.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="28" topLine="0" />
+			<Cursor1 position="5046" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="9" />
+			<Collapse line="11" />
+			<Collapse line="23" />
+			<Collapse line="35" />
+			<Collapse line="93" />
+			<Collapse line="139" />
+			<Collapse line="230" />
+			<Collapse line="241" />
+			<Collapse line="252" />
+		</Folding>
+	</File>
+	<File name="stack/test/test.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="20" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="110" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="stack/test/test.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
+	<File name="tree/tree.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="70" topLine="0" />
+			<Cursor1 position="912" topLine="0" />
 		</Cursor>
+		<Folding>
+			<Collapse line="15" />
+		</Folding>
 	</File>
-	<File name="common/common.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+	<File name="stack/stack.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="251" topLine="0" />
+			<Cursor1 position="458" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="13" />
+		</Folding>
+	</File>
+	<File name="common/common.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="15" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="59" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

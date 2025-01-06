@@ -1,6 +1,6 @@
-#include "stack/test/test.h"
+#include "tree/test/test.h"
 
 int main()
 {
-    return test();
+	return remove_test();
 }

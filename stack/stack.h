@@ -6,7 +6,6 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include <threads.h>
 
 #include "common.h"
 

@@ -1,5 +1,5 @@
-#ifndef TEST_H_INCLUDED
-#define TEST_H_INCLUDED
+#ifndef STACK_TEST_H_INCLUDED
+#define STACK_TEST_H_INCLUDED
 
 #include "../stack.h"
 
