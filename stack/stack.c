@@ -119,4 +119,3 @@ int64_t stack_peek(Stack *stack)
 
 	return stack->stack_data[stack->stack_size - 1];
 }
-
