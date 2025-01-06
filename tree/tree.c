@@ -1,5 +1,8 @@
 #include "tree.h"
 
+#define min(a, b) ((a) < (b) ? (a) : (b))
+#define max(a, b) ((a) > (b) ? (a) : (b))
+
 TreeNode **find_max_tree_node(TreeNode *);
 
 TreeNode **find_min_tree_node(TreeNode *);
@@ -87,50 +90,37 @@ void print_tree_node(TreeNode *tree_node)
 
 int insert_tree_node(TreeNode **root, TreeNode *new_node)
 {
-	TreeNode **current_ptr = root;
-
-	if(current_ptr == NULL) {
-		container_error = CONTAINER_NOT_PROVIDED;
-		return 0;
-	}
-
-	if(new_node == NULL) {
-		container_error = CONTAINER_IS_EMPTY;
-		return 0;
-	}
-
-	if((*current_ptr) == NULL) {
-		(*current_ptr) = new_node;
+	if (*root == NULL) {
+		*root = new_node;
 		return 1;
 	}
 
 	int old_factor = (*root)->balance_factor;
 
-	if(new_node->data < (*current_ptr)->data) {
-		int result = insert_tree_node(&(*current_ptr)->left, new_node);
-		if(result == 1) {
-			(*current_ptr)->balance_factor -= 1;
-			if((*current_ptr)->balance_factor < -1) {
-				balance_tree_node(current_ptr);
+	if (new_node->data < (*root)->data) {
+		int result = insert_tree_node(&(*root)->left, new_node);
+		if (result == 1) {
+			(*root)->balance_factor -= 1;
+			if ((*root)->balance_factor < -1) {
+				balance_tree_node(root);
 			}
 		}
 	} else {
-		int result = insert_tree_node(&(*current_ptr)->right, new_node);
-		if(result == 1) {
-			(*current_ptr)->balance_factor += 1;
-			if((*current_ptr)->balance_factor > 1) {
-				balance_tree_node(current_ptr);
+		int result = insert_tree_node(&(*root)->right, new_node);
+		if (result == 1) {
+			(*root)->balance_factor += 1;
+			if ((*root)->balance_factor > 1) {
+				balance_tree_node(root);
 			}
 		}
 	}
 
-	return (*current_ptr)->balance_factor != 0 && old_factor == 0 ? 1 : 0;
+	return (*root)->balance_factor != 0 && old_factor == 0 ? 1 : 0;
 }
 
 void insert_tree_value(TreeNode **tree_node, int64_t input_data)
 {
 	TreeNode **current_ptr = tree_node;
-
 	if(current_ptr == NULL) {
 		container_error = CONTAINER_NOT_PROVIDED;
 
@@ -161,52 +151,47 @@ int64_t remove_tree_node2(TreeNode **current, int64_t input_data)
 		return CONTAINER_NOT_PROVIDED;
 	}
 
-	int8_t old_factor = 0;
-	old_factor = (*current)->balance_factor;
-
 	if(input_data == (*current)->data) {
 		if((*current)->left == NULL && (*current)->right == NULL) {
 			free_this_tree_node(*current);
 			*current = NULL;
 
 			return 1;
+		} else if((*current)->left != NULL && (*current)->right != NULL) {
+			TreeNode **replacement = find_min_tree_node((*current)->right);
+			(*current)->data = (*replacement)->data;
+			int64_t temp = remove_tree_node2(replacement, (*replacement)->data);
+			if(temp == 1) {
+				(*current)->balance_factor -= 1;
+			}
 		} else {
-			int side;
-			TreeNode **replacement = find_replacement(current, &side);
-			if(replacement != NULL) {
-				(*current)->data = (*replacement)->data;
-				int64_t temp = remove_tree_node2(replacement, (*replacement)->data);
-				*replacement = NULL;
-			} else {
-				free_this_tree_node(*current);
-				*current = NULL;
+			TreeNode *child = (*current)->left != NULL ? (*current)->left : (*current)->right;
+			free_this_tree_node(*current);
+			*current = child;
 
-				return 1;
-			}
-		}
-
-		return 1;
-	}
-
-	if(input_data < (*current)->data) {
-		int64_t result = remove_tree_node2(&((*current)->left), input_data);
-		if(result == 1) {
-			(*current)->balance_factor += 1;
-			if((*current)->balance_factor > 1) {
-				balance_tree_node(current);
-			}
+			return 1;
 		}
 	} else {
-		int64_t result = remove_tree_node2(&((*current)->right), input_data);
-		if(result == 1) {
-			(*current)->balance_factor -= 1;
-			if((*current)->balance_factor < -1) {
-				balance_tree_node(current);
+		if(input_data < (*current)->data) {
+			int result = remove_tree_node2(&((*current)->left), input_data);
+			if(result == 1) {
+				(*current)->balance_factor += 1;
+				if((*current)->balance_factor > 1) {
+					balance_tree_node(current);
+				}
+			}
+		} else {
+			int result = remove_tree_node2(&((*current)->right), input_data);
+			if(result == 1) {
+				(*current)->balance_factor -= 1;
+				if((*current)->balance_factor < -1) {
+					balance_tree_node(current);
+				}
 			}
 		}
 	}
 
-	return (*current)->balance_factor == 0 && old_factor != 0 ? 1 : 0;
+	return (*current)->balance_factor != 0 ? 1 : 0;
 }
 
 void remove_tree_value(TreeNode **root, int64_t input_data)
@@ -308,7 +293,7 @@ TreeNode **find_max_tree_node(TreeNode *root)
 		tmp = tmp->right;
 	}
 
-	return NULL;
+	return &tmp;
 }
 
 TreeNode **find_min_tree_node(TreeNode *root)
@@ -328,7 +313,7 @@ TreeNode **find_min_tree_node(TreeNode *root)
 		tmp = tmp->left;
 	}
 
-	return NULL;
+	return &tmp;
 }
 
 TreeNode **find_replacement(TreeNode **root, int *side)
@@ -343,104 +328,21 @@ TreeNode **find_replacement(TreeNode **root, int *side)
 		TreeNode **tmp = find_max_tree_node((*root)->left);
 		if(tmp != NULL) {
 			*side = -1;
+
 			return tmp;
 		}
 	} else if((*root)->right != NULL) {
 		TreeNode **tmp = find_min_tree_node((*root)->right);
 		if(tmp != NULL) {
 			*side = 1;
+
 			return tmp;
 		}
 	}
+
 	*side = 0;
+
 	return NULL;
-}
-
-TreeNode *rotate_left_tree_node(TreeNode *root)
-{
-	if(root == NULL) {
-		container_error = CONTAINER_NOT_PROVIDED;
-
-		return root;
-	}
-
-	TreeNode *new_root = root->right;
-	if(new_root == NULL) {
-		return root;
-	}
-
-	int right_balance_factor = 0;
-	if(root->right != NULL) {
-		right_balance_factor = root->right->balance_factor;
-	} else {
-		right_balance_factor = 0;
-	}
-
-	root->balance_factor = root->balance_factor - 1 - right_balance_factor;
-	right_balance_factor -= 1;
-
-	root->right->balance_factor = right_balance_factor;
-
-	root->right = new_root->left;
-	new_root->left = root;
-
-	return new_root;
-}
-
-TreeNode *rotate_right_tree_node(TreeNode * root)
-{
-	if(root == NULL) {
-		container_error = CONTAINER_NOT_PROVIDED;
-
-		return root;
-	}
-
-	TreeNode *new_root = root->left;
-	if(new_root == NULL) {
-		return root;
-	}
-
-	int left_balance_factor = 0;
-	if(root->left != NULL) {
-		left_balance_factor = root->left->balance_factor;
-	} else {
-		left_balance_factor = 0;
-	}
-
-	root->balance_factor = root->balance_factor + 1 - left_balance_factor;
-	left_balance_factor += 1;
-
-	root->left->balance_factor = left_balance_factor;
-
-	root->left = new_root->right;
-	new_root->right = root;
-
-	return new_root;
-}
-
-void balance_tree_node(TreeNode **root)
-{
-	if(*root == NULL) {
-		container_error = CONTAINER_NOT_PROVIDED;
-
-		return;
-	}
-
-	if((*root)->balance_factor > 0) {
-		if((*root)->right->balance_factor < 0) {
-			(*root)->right = rotate_right_tree_node((*root)->right);
-			*root = rotate_left_tree_node(*root);
-		} else {
-			*root = rotate_left_tree_node(*root);
-		}
-	} else {
-		if((*root)->left->balance_factor > 0) {
-			(*root)->left = rotate_left_tree_node((*root)->left);
-			*root = rotate_right_tree_node(*root);
-		} else {
-			*root = rotate_right_tree_node(*root);
-		}
-	}
 }
 
 void update_height(TreeNode * tree_node)
@@ -459,3 +361,47 @@ int get_balance_factor(TreeNode * node)
 	return node->balance_factor;
 }
 
+TreeNode *rotate_left_tree_node(TreeNode *root)
+{
+	TreeNode *new_root = root->right;
+	root->right = new_root->left;
+	new_root->left = root;
+
+	root->balance_factor = root->balance_factor - 1 - max(0, new_root->balance_factor);
+	new_root->balance_factor = new_root->balance_factor - 1 + min(0, root->balance_factor);
+
+	return new_root;
+}
+
+TreeNode *rotate_right_tree_node(TreeNode *root)
+{
+	TreeNode *new_root = root->left;
+	root->left = new_root->right;
+	new_root->right = root;
+
+	root->balance_factor = root->balance_factor + 1 - min(0, new_root->balance_factor);
+	new_root->balance_factor = new_root->balance_factor + 1 + max(0, root->balance_factor);
+
+	return new_root;
+}
+
+void balance_tree_node(TreeNode **root)
+{
+	if(*root == NULL) {
+		return;
+	}
+
+	if((*root)->balance_factor > 1) {
+		if((*root)->right->balance_factor < 0) {
+			(*root)->right = rotate_right_tree_node((*root)->right);
+		}
+
+		*root = rotate_left_tree_node(*root);
+	} else if((*root)->balance_factor < -1) {
+		if((*root)->left->balance_factor > 0) {
+			(*root)->left = rotate_left_tree_node((*root)->left);
+		}
+
+		*root = rotate_right_tree_node(*root);
+	}
+}

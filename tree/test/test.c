@@ -25,6 +25,7 @@ int remove_test()
 		remove_tree_value(&root, i);
 		print_tree_node(root);
 	}
+
 	print_tree_node(root);
 
 	free_tree_node(root);
