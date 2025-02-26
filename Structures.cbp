@@ -36,6 +36,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="common/common.h" />
+		<Unit filename="create_data_script.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="create_data_script.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
