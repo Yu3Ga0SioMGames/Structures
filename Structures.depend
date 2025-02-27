@@ -86,9 +86,12 @@
 1740593828 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/common/common.h
 	<threads.h>
 
-1740598968 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/main.c
+1740668427 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/main.c
+	<time.h>
 	<stdio.h>
 	<stdlib.h>
+	<limits.h>
+	<sorting.h>
 
 1740593828 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.h
 	"../tree.h"
@@ -147,6 +150,15 @@
 	"create_data_script.h"
 
 1740595732 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/create_data_script.h
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+
+1740668421 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.c
+	"sorting.h"
+
+1740668421 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.h
 	<time.h>
 	<stdio.h>
 	<stdlib.h>

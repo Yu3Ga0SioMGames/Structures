@@ -1,42 +1,49 @@
+#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
+#include <sorting.h>
 
 int main()
 {
-	int count = 100;
+	int count = 10000;
 	char filename[25];
 
 	sprintf(filename, "%d_data_%d.txt", count, count);
 
-	FILE *file_read = fopen(filename, "r");
-	if(file_read == NULL) {
-		return 1;
-	}
+	FILE *file = fopen(filename, "r");
 
 	int arr[count];
 
-	size_t readed_elements = fread(arr, sizeof(int), count, file_read);
-	fclose(file_read);
-	if(readed_elements != count) {
-		return 1;
-	} else {
-		for(int i = 0; i < count; ++i) {
-			printf("%d ", arr[i]);
+	for(int i = 0; i < count; ++i) {
+		if(fscanf(file, "%d", &arr[i]) != 1) {
+			fclose(file);
+			return 1;
 		}
 	}
 
-	// ArraySort(arr);
+	fclose(file);
 
-	FILE *file_write = fopen("result.txt", "w+");
-	if(file_write == NULL) {
+	OptimizeBubbleSort(arr, count);
+
+	file = fopen("result.txt", "w+");
+	if(file == NULL) {
 		return 1;
 	}
 
-	size_t writer_elements = fwrite(arr, sizeof(int), count, file_write);
-	fclose(file_write);
-	if(writer_elements != count) {
-		return 1;
+	for(int i = 0; i < count; ++i) {
+		if(fprintf(file, "%d ", arr[i]) < 0) {
+			fclose(file);
+			return 1;
+		}
 	}
 
+	fclose(file);
+
+	for(int i = 0; i < count; ++i) {
+		printf("%d ", arr[i]);
+	}
+
+	printf("\n");
 	return 0;
 }
