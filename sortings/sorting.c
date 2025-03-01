@@ -1,9 +1,56 @@
 #include "sorting.h"
 
-void BubbleSort(int arr[], size_t count)
+void MergeSort(int arr[], size_t length)
 {
-	for(int i = 0; i < count - 1; i++) {
-		for(int j = 0; j < count - 1 - i; j++) {
+	MergeSortRecursion(arr, 0, length - 1);
+}
+
+void MergeSortRecursion(int arr[], int left_index, int right_index)
+{
+	if(left_index < right_index) {
+		int middle_index = left_index + (right_index - left_index) / 2;
+
+		MergeSortRecursion(arr, left_index, middle_index);
+		MergeSortRecursion(arr, middle_index + 1, right_index);
+
+		MergeSortedArrays(arr, left_index, middle_index, right_index);
+	}
+}
+
+void MergeSortedArrays(int arr[], int left_index, int middle_index, int right_index)
+{
+	int left_length = middle_index - left_index + 1;
+	int right_length = right_index - middle_index;
+
+	int tmp_arr_left[left_length];
+	int tmp_arr_right[right_length];
+
+	for(int i = 0; i < left_length; ++i) {
+		tmp_arr_left[i] = arr[left_index + i];
+	}
+
+	for(int i = 0; i < right_length; ++i) {
+		tmp_arr_right[i] = arr[middle_index + 1 + i];
+	}
+
+	int i, j, k;
+	for(i = 0, j = 0, k = left_index; k <= right_index; k++) {
+		if((i < left_length) && (j >= right_length || tmp_arr_left[i] <= tmp_arr_right[j])) {
+			arr[k] = tmp_arr_left[i];
+
+			i++;
+		} else {
+			arr[k] = tmp_arr_right[j];
+
+			j++;
+		}
+	}
+}
+
+void BubbleSort(int arr[], size_t length)
+{
+	for(int i = 0; i < length - 1; i++) {
+		for(int j = 0; j < length - 1 - i; j++) {
 			if(arr[j] > arr[j + 1]) {
 				int tmp = arr[j];
 
@@ -15,14 +62,14 @@ void BubbleSort(int arr[], size_t count)
 	}
 }
 
-void OptimizeBubbleSort(int arr[], size_t count)
+void OptimizeBubbleSort(int arr[], size_t length)
 {
 	int swap = 0;
 
-	for(int i = 0; i < count - 1; i++) {
+	for(int i = 0; i < length - 1; i++) {
 		swap = 0;
 
-		for(int j = 0; j < count - 1 - i; j++) {
+		for(int j = 0; j < length - 1 - i; j++) {
 			if(arr[j] > arr[j + 1]) {
 				int tmp = arr[j];
 
@@ -40,9 +87,9 @@ void OptimizeBubbleSort(int arr[], size_t count)
 	}
 }
 
-void InsertSort(int arr[], size_t count)
+void InsertSort(int arr[], size_t length)
 {
-	for(int i = 1; i < count; ++i) {
+	for(int i = 1; i < length; ++i) {
 		int tmp = arr[i];
 		int j = i - 1;
 
@@ -55,12 +102,12 @@ void InsertSort(int arr[], size_t count)
 	}
 }
 
-void SelectionSort(int arr[], size_t count)
+void SelectionSort(int arr[], size_t length)
 {
-	for(int i = 0; i < count - 1; ++i) {
+	for(int i = 0; i < length - 1; ++i) {
 		int min_i = i;
 
-		for(int j = i + 1; j < count; ++j) {
+		for(int j = i + 1; j < length; ++j) {
 			if(arr[j] < arr[min_i]) {
 				min_i = j;
 			}

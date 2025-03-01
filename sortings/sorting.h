@@ -6,12 +6,14 @@
 #include <stdlib.h>
 #include <limits.h>
 
-void InsertSort(int arr[], size_t count);
+void MergeSort(int arr[], size_t length);
 
-void BubbleSort(int arr[], size_t count);
+void InsertSort(int arr[], size_t length);
 
-void SelectionSort(int arr[], size_t count);
+void BubbleSort(int arr[], size_t length);
 
-void OptimizeBubbleSort(int arr[], size_t count);
+void SelectionSort(int arr[], size_t length);
+
+void OptimizeBubbleSort(int arr[], size_t length);
 
 #endif

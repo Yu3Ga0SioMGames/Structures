@@ -86,7 +86,7 @@
 1740593828 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/common/common.h
 	<threads.h>
 
-1740826736 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/main.c
+1740840599 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/main.c
 	<time.h>
 	<stdio.h>
 	<stdlib.h>
@@ -155,10 +155,10 @@
 	<stdlib.h>
 	<limits.h>
 
-1740826704 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.c
+1740840114 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.c
 	"sorting.h"
 
-1740825949 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.h
+1740837239 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.h
 	<time.h>
 	<stdio.h>
 	<stdlib.h>
