@@ -24,7 +24,7 @@ int main()
 
 	fclose(file);
 
-	OptimizeBubbleSort(arr, count);
+	SelectionSort(arr, count);
 
 	file = fopen("result.txt", "w+");
 	if(file == NULL) {
