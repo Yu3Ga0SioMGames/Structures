@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <limits.h>
 
+void QuickSort(int arr[], size_t length);
+
 void MergeSort(int arr[], size_t length);
 
 void InsertSort(int arr[], size_t length);

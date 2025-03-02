@@ -6,7 +6,7 @@
 
 int main()
 {
-	int count = 10;
+	int count = 10000;
 	char filename[25];
 
 	sprintf(filename, "%d_data_%d.txt", count, count);
@@ -24,7 +24,7 @@ int main()
 
 	fclose(file);
 
-	MergeSort(arr, count);
+	QuickSort(arr, count);
 
 	file = fopen("result.txt", "w+");
 	if(file == NULL) {

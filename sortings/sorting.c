@@ -47,6 +47,48 @@ void MergeSortedArrays(int arr[], int left_index, int middle_index, int right_in
 	}
 }
 
+void _QuickSort(int arr[], int left, int right)
+{
+	if(left > right) {
+		return;
+	}
+
+	int middle_element = arr[(left + right) / 2];
+
+	int i = left;
+	int j = right;
+
+	while(i <= j) {
+		while(arr[i] < middle_element) {
+			++i;
+		}
+
+		while(arr[j] > middle_element) {
+			--j;
+		}
+
+		if(i <= j) {
+			int tmp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = tmp;
+
+			++i;
+			--j;
+		}
+	}
+
+	_QuickSort(arr, left, j);
+	_QuickSort(arr, i, right);
+}
+
+void QuickSort(int arr[], size_t length)
+{
+	int left = 0;
+	int right = length - 1;
+
+	_QuickSort(arr, left, right);
+}
+
 void BubbleSort(int arr[], size_t length)
 {
 	for(int i = 0; i < length - 1; i++) {

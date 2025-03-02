@@ -2,6 +2,55 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="stack/test/test.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="20" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="110" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="sortings/sorting.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="413" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="stack/stack.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2229" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="3" />
+			<Collapse line="4" />
+			<Collapse line="11" />
+			<Collapse line="16" />
+			<Collapse line="29" />
+			<Collapse line="31" />
+			<Collapse line="37" />
+			<Collapse line="49" />
+			<Collapse line="50" />
+			<Collapse line="60" />
+			<Collapse line="61" />
+			<Collapse line="66" />
+			<Collapse line="71" />
+			<Collapse line="78" />
+			<Collapse line="79" />
+			<Collapse line="84" />
+			<Collapse line="85" />
+			<Collapse line="97" />
+			<Collapse line="98" />
+			<Collapse line="102" />
+			<Collapse line="110" />
+			<Collapse line="111" />
+			<Collapse line="115" />
+		</Folding>
+	</File>
+	<File name="stack/test/test.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="20" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="657" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="3" />
+			<Collapse line="18" />
+		</Folding>
+	</File>
 	<File name="stack/stack.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="458" topLine="0" />
@@ -93,47 +142,6 @@
 			<Collapse line="400" />
 		</Folding>
 	</File>
-	<File name="tree/tree.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-3" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="912" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="15" />
-		</Folding>
-	</File>
-	<File name="sortings/sorting.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="798" topLine="37" />
-		</Cursor>
-	</File>
-	<File name="sortings/sorting.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="266" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="common/common.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="15" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="59" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="130" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="17" />
-			<Collapse line="18" />
-			<Collapse line="29" />
-			<Collapse line="33" />
-			<Collapse line="34" />
-			<Collapse line="42" />
-		</Folding>
-	</File>
-	<File name="tree/test/test.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="11" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="82" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="tree/test/test.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="5046" topLine="0" />
@@ -150,48 +158,79 @@
 			<Collapse line="252" />
 		</Folding>
 	</File>
-	<File name="stack/stack.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+	<File name="tree/test/test.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="11" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2229" topLine="0" />
+			<Cursor1 position="82" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="20" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="706" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="3" />
-			<Collapse line="4" />
-			<Collapse line="11" />
-			<Collapse line="16" />
+			<Collapse line="7" />
+			<Collapse line="17" />
+			<Collapse line="18" />
 			<Collapse line="29" />
-			<Collapse line="31" />
-			<Collapse line="37" />
-			<Collapse line="49" />
-			<Collapse line="50" />
-			<Collapse line="60" />
-			<Collapse line="61" />
-			<Collapse line="66" />
-			<Collapse line="71" />
-			<Collapse line="78" />
-			<Collapse line="79" />
-			<Collapse line="84" />
-			<Collapse line="85" />
-			<Collapse line="97" />
-			<Collapse line="98" />
-			<Collapse line="102" />
-			<Collapse line="110" />
-			<Collapse line="111" />
-			<Collapse line="115" />
+			<Collapse line="33" />
+			<Collapse line="34" />
+			<Collapse line="42" />
 		</Folding>
+	</File>
+	<File name="common/common.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="15" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="59" topLine="0" />
+		</Cursor>
 	</File>
 	<File name="common/common.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="251" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="stack/test/test.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="20" zoom_2="0">
+	<File name="tree/tree.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="657" topLine="0" />
+			<Cursor1 position="912" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="15" />
+		</Folding>
+	</File>
+	<File name="sortings/sorting.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2760" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="3" />
-			<Collapse line="18" />
+			<Collapse line="8" />
+			<Collapse line="9" />
+			<Collapse line="20" />
+			<Collapse line="27" />
+			<Collapse line="31" />
+			<Collapse line="36" />
+			<Collapse line="37" />
+			<Collapse line="50" />
+			<Collapse line="51" />
+			<Collapse line="60" />
+			<Collapse line="61" />
+			<Collapse line="65" />
+			<Collapse line="69" />
+			<Collapse line="84" />
+			<Collapse line="92" />
+			<Collapse line="93" />
+			<Collapse line="94" />
+			<Collapse line="95" />
+			<Collapse line="107" />
+			<Collapse line="110" />
+			<Collapse line="113" />
+			<Collapse line="114" />
+			<Collapse line="125" />
+			<Collapse line="132" />
+			<Collapse line="133" />
+			<Collapse line="137" />
+			<Collapse line="147" />
+			<Collapse line="148" />
+			<Collapse line="151" />
+			<Collapse line="152" />
 		</Folding>
 	</File>
 	<File name="create_data_script.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="20" zoom_2="0">
@@ -203,10 +242,5 @@
 			<Collapse line="8" />
 			<Collapse line="14" />
 		</Folding>
-	</File>
-	<File name="stack/test/test.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="20" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="110" topLine="0" />
-		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
