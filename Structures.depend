@@ -160,13 +160,5 @@
 	<stdlib.h>
 	<limits.h>
 
-1740915766 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/test/test.h
-	<time.h>
-	<stdio.h>
-	<stdlib.h>
-	<limits.h>
-	<sorting.h>
-
 1740915766 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/test/test.c
 	"test.h"
-

@@ -53,7 +53,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="sortings/sorting.h" />
-		<Unit filename="sortings/test/test.c">
+<Unit filename="sortings/test/test.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="sortings/test/test.h" />
