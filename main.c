@@ -1,6 +1,6 @@
-#include "sortings/test/test.h"
+#include "hash_table/test/test.h"
 
 int main()
 {
-	return test_sort();
+	return test_hash_table();
 }

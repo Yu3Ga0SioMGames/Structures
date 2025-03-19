@@ -80,19 +80,19 @@
 1721648571 source:/home/yu3ga/Projects/Programming/Programs/Structures/common/common.c
 	"common.h"
 
-1740593828 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/common/common.c
+1741629151 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/common/common.c
 	"common.h"
 
-1740593828 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/common/common.h
+1741629151 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/common/common.h
 	<threads.h>
 
-1740915766 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/main.c
-	"sortings/test/test.h"
+1741632896 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/main.c
+	"hash_table/test/test.h"
 
-1740593828 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.h
+1741629151 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.h
 	"../tree.h"
 
-1740593828 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.h
+1741629151 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.h
 	<math.h>
 	<stdio.h>
 	<stdlib.h>
@@ -117,16 +117,16 @@
 1725185510 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack_test/stack_test.h
 	"../stack/stack.h"
 
-1740593828 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.c
+1741629151 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/test/test.c
 	"test.h"
 
-1740593828 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.c
+1741629151 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/tree/tree.c
 	"tree.h"
 
-1740593828 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack.c
+1741629151 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack.c
 	"stack.h"
 
-1740593828 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack.h
+1741629151 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/stack.h
 	<stdio.h>
 	<stdlib.h>
 	<stdint.h>
@@ -134,10 +134,10 @@
 	<stdbool.h>
 	"common.h"
 
-1740593828 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/test/test.c
+1741629151 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/test/test.c
 	"test.h"
 
-1740593828 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/test/test.h
+1741629151 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/stack/test/test.h
 	"../stack.h"
 
 1729631490 h"
@@ -151,14 +151,34 @@
 	<stdlib.h>
 	<limits.h>
 
-1740913707 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.c
+1741629151 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.c
 	"sorting.h"
 
-1740846918 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.h
+1741629151 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/sorting.h
 	<time.h>
 	<stdio.h>
 	<stdlib.h>
 	<limits.h>
 
-1740915766 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/test/test.c
+1741629151 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/test/test.c
 	"test.h"
+
+1742420985 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/hash_table.c
+	"hash_table.h"
+
+1742420985 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/hash_table.h
+	<string.h>
+
+1742418616 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/test/test.c
+	"test.h"
+
+1741633010 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/test/test.h
+	"../hash_table.h"
+
+1741629151 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/test/test.h
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+	<sorting.h>
+
