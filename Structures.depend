@@ -163,13 +163,14 @@
 1741629151 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/sortings/test/test.c
 	"test.h"
 
-1742420985 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/hash_table.c
+1742931374 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/hash_table.c
 	"hash_table.h"
 
-1742420985 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/hash_table.h
+1742930988 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/hash_table.h
+	<stdio.h>
 	<string.h>
 
-1742418616 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/test/test.c
+1742930594 source:/home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/test/test.c
 	"test.h"
 
 1741633010 /home/yu3ga0siomgames/PROJECTS/PROGRAMMING/PROGRAMS/Structures/hash_table/test/test.h

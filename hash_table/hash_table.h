@@ -4,10 +4,12 @@
 
 
 
+#include <stdio.h>
 #include <string.h>
 
 
-#define SIZE 1000
+#define SIZE 50000
+#define ERROR "Error...\n"
 
 
 typedef
@@ -18,21 +20,43 @@ struct _item
 } Item;
 
 typedef
+struct _list
+{
+	Item *item;
+	struct _list *next;
+} List;
+
+typedef
 struct _hash_table
 {
 	Item **items;
 
-	size_t num_of_elem;
+	List **overflow_buckets;
+
 	size_t table_size;
+	size_t num_of_elem;
 } HashTable;
 
 
-Item *create_item(char *, char *);
+unsigned long long hash_table_hash_function(char *);
 
-HashTable *create_hash_table(size_t table_size);
+Item *hash_table_item_create(char *, char *);
+Item *list_remove(List *);
 
-void free_item(Item *);
-void free_hash_table(HashTable *);
+HashTable *hash_table_create(size_t table_size);
+
+char *hash_table_search(HashTable *, char *);
+
+void hash_table_delete(HashTable *, char *);
+void hash_table_insert(HashTable *, Item *);
+void hash_table_item_free(Item *);
+void hash_table_free(HashTable *);
+void list_free(List *);
+void overflow_buckets_free(HashTable *);
+
+List *list_allocate();
+List *list_insert(List *, Item *);
+List **overflow_buckets_create(HashTable *);
 
 
 
